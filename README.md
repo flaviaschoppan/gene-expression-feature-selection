@@ -27,8 +27,8 @@ The focus of this project is strictly on variance computation and inspection, tr
 
 Many downstream transcriptomics analyses rely implicitly on variance-based assumptions, such as:
 
-• Low-variance genes being uninformative
-• High-variance genes contributing disproportionately to structure and signal
+- Low-variance genes being uninformative
+- High-variance genes contributing disproportionately to structure and signal
 
 Despite this, the global distribution of gene-wise variance is often not inspected explicitly, and filtering thresholds are frequently chosen without quantitative justification.
 
@@ -38,9 +38,9 @@ This pipeline makes variance computation and inspection explicit, enabling infor
 
 ## What this project is NOT
 
-• This is not a differential expression analysis
-• This is not a clustering pipeline
-• This is not a dimensionality reduction pipeline
+- This is not a differential expression analysis
+- This is not a clustering pipeline
+- This is not a dimensionality reduction pipeline
 
 No genes are filtered or removed in this stage.
 The pipeline deliberately stops before feature selection.
@@ -57,6 +57,7 @@ This project isolates gene-wise variance as a standalone analytical step.
 
 ## Project structure
 
+```
 gene-expression-feature-selection/
 ├── data/
 │   └── raw/
@@ -75,18 +76,19 @@ gene-expression-feature-selection/
 ├── requirements.txt
 ├── README.md
 └── LICENSE
+```
 
 ---
 
 ## Outputs
 
 The pipeline produces the following versionable artifacts:
-```
-outputs/matrices/gene_variances.csv
-outputs/figures/gene_variance_distribution.png
-```
-• The CSV contains per-gene variance values computed on log2 CPM data
-• The PNG visualizes the global distribution of gene-wise variance
+
+The CSV contains per-gene variance values computed on log2 CPM data
+``` outputs/matrices/gene_variances.csv ```
+
+The PNG visualizes the global distribution of gene-wise variance
+``` outputs/figures/gene_variance_distribution.png ```
 
 ---
 
@@ -103,10 +105,10 @@ All outputs will be written to the ```outputs/``` folder.
 ## Reproducibility
 
 All steps in this pipeline are:
-• Explicit
-• Deterministic
-• Scripted
-• And produce versionable artifacts
+- Explicit
+- Deterministic
+- Scripted
+- And produce versionable artifacts
 
 The pipeline is designed to be inspectable, auditable, and easily extensible.
 
@@ -116,8 +118,8 @@ The pipeline is designed to be inspectable, auditable, and easily extensible.
 
 The data used in this repository are synthetic and intended solely to demonstrate:
 
-• The numerical behavior of variance computation
-• The structure of a feature inspection workflow
+- The numerical behavior of variance computation
+- The structure of a feature inspection workflow
 
 They are not intended for biological interpretation.
 
